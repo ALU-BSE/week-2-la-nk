@@ -138,9 +138,12 @@ urlpatterns = [
   ```
 - Visit `http://127.0.0.1:8000/books/` and navigate pages.  
 - **Discussion Questions:**  
-  - Why is pagination important for large datasets?  
+  - Why is pagination important for large datasets? 
+  Pagination allows for performance optimization by reducing the data transfer size and database query load. It also returns small data that is easy to read for the end users
   - How would you customize items per page dynamically?  
+  Our implementation uses the query parameter called `per page` that is manipulated on the fronted through the dropdown and used by the view to paginate.
   - What happens if `page` is invalid?  
+  For non-numeric and negative values it defaults to page 1 and for out of range values it will return the last page.
 
 
 ## **Bonus Challenges**  
@@ -156,3 +159,4 @@ Learners will:
 - Implement and customize pagination.  
 
 **Happy Coding!** 
+
