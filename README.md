@@ -1,3 +1,4 @@
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=19566918)
 # **Django Pagination Hands-On Group Activity**  
 **Objective:** Create a Django project, populate a model with AI-generated data, and implement pagination to display records efficiently.  
 
@@ -137,9 +138,12 @@ urlpatterns = [
   ```
 - Visit `http://127.0.0.1:8000/books/` and navigate pages.  
 - **Discussion Questions:**  
-  - Why is pagination important for large datasets?  
+  - Why is pagination important for large datasets? 
+  Pagination allows for performance optimization by reducing the data transfer size and database query load. It also returns small data that is easy to read for the end users
   - How would you customize items per page dynamically?  
+  Our implementation uses the query parameter called `per page` that is manipulated on the fronted through the dropdown and used by the view to paginate.
   - What happens if `page` is invalid?  
+  For non-numeric and negative values it defaults to page 1 and for out of range values it will return the last page.
 
 
 ## **Bonus Challenges**  
@@ -155,3 +159,4 @@ Learners will:
 - Implement and customize pagination.  
 
 **Happy Coding!** 
+
